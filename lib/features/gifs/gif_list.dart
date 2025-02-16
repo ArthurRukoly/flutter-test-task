@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'gif_card.dart';
-import '../../widgets/loading_indicator.dart';
 
 class GifList extends StatelessWidget {
   final List<dynamic> gifs;

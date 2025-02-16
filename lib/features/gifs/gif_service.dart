@@ -14,7 +14,7 @@ class GifService {
           "api_key": apiKey,
           "q": query,
           "limit": 15,
-          "offset": page * 2
+          "offset": page * 15
         },
       );
 
