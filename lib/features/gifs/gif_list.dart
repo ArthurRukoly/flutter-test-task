@@ -14,30 +14,36 @@ class GifList extends StatelessWidget {
     required this.scrollController,
   });
 
-  @override
+@override
 Widget build(BuildContext context) {
-  return LayoutBuilder(
-    builder: (context, constraints) {
-      return GridView.builder(
-        controller: scrollController,
-        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 200, // Each item will be at most 200px wide
-          mainAxisSpacing: 8.0,
-          crossAxisSpacing: 8.0,
-          childAspectRatio: 1, // Keeps GIFs square
-        ),
-        padding: EdgeInsets.all(8.0),
-        itemCount: gifs.length + 1,
-        itemBuilder: (context, index) {
-          if (index == gifs.length) {
-            return isLoadingMore ? LoadingIndicator() : SizedBox.shrink();
-          }
+  return Scrollbar(
+    controller: scrollController, // Attach the existing ScrollController
+    thickness: 6.0, // Customize scrollbar thickness
+    radius: Radius.circular(10), // Rounded edges for the scrollbar
+    thumbVisibility: true, // Ensure scrollbar is always visible when scrolling
+    child: LayoutBuilder(
+      builder: (context, constraints) {
+        return GridView.builder(
+          controller: scrollController,
+          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 200, 
+            mainAxisSpacing: 8.0,
+            crossAxisSpacing: 8.0,
+            childAspectRatio: 1,
+          ),
+          padding: EdgeInsets.all(8.0),
+          itemCount: gifs.length + 1, 
+          itemBuilder: (context, index) {
+            if (index == gifs.length) {
+              return isLoadingMore ? Center(child: CircularProgressIndicator()) : SizedBox.shrink();
+            }
 
-          final gifData = gifs[index];
-          return GifCard(gifData: gifData);
-        },
-      );
-    },
+            final gifData = gifs[index];
+            return GifCard(gifData: gifData);
+          },
+        );
+      },
+    ),
   );
 }
 }
