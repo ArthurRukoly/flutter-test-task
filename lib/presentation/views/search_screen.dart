@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../features/gifs/gif_service.dart';
-import '../features/gifs/gif_list.dart';
-import '../features/gifs/gif_search_bar.dart';
-import '../widgets/loading_indicator.dart';
-import '../widgets/error_message.dart';
+import '../../data/api/gif_api.dart';
+import '../widgets/gif_list/gif_list.dart';
+import '../widgets/gif_search_bar/gif_search_bar.dart';
+import '../indicators/loading_indicator.dart';
+import '../indicators/error_message.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});

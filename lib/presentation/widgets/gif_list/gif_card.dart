@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:test_task_flutter/screens/gif_details_screen.dart';
+import 'package:test_task_flutter/presentation/views/gif_details_screen.dart';
 
 class GifCard extends StatelessWidget {
   // final String gifUrl;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'gif_card.dart';
+import 'package:test_task_flutter/presentation/widgets/gif_list/gif_card.dart';
 
 class GifList extends StatelessWidget {
   final List<dynamic> gifs;
