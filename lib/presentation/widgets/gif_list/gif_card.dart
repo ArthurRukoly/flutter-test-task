@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:test_task_flutter/data/services/navigator_service.dart';
-import 'package:test_task_flutter/presentation/screens/gif_details_screen.dart';
 
 class GifCard extends StatelessWidget {
   // final String gifUrl;
@@ -13,7 +12,6 @@ class GifCard extends StatelessWidget {
     final gifUrl = gifData['images']['fixed_height']['url'];
 
     void _moveToDetails() {
-      // Navigator.push(context, MaterialPageRoute(builder: (context) => GifDetailScreen(gifData: gifData)));
       navigationService.navigateToGifDetails(gifData);
     }
 
