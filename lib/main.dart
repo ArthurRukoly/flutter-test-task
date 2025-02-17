@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:test_task_flutter/core/theme.dart';
-import 'package:test_task_flutter/presentation/views/search_screen.dart';
+import 'package:test_task_flutter/data/services/navigator_service.dart';
+import 'package:test_task_flutter/presentation/themes/theme.dart';
+import 'package:test_task_flutter/presentation/screens/search_screen.dart';
 
 Future main() async{
   await dotenv.load(fileName: ".env");
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: lightTheme, // Apply light theme
       darkTheme: darkTheme, // Apply dark theme
+      navigatorKey: navigationService.navigatorKey,
       themeMode: ThemeMode.dark, // System-based theme switching
       home: SearchScreen(),
     );

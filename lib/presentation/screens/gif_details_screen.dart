@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:test_task_flutter/data/services/navigator_service.dart';
 import 'package:test_task_flutter/presentation/widgets/gif_details/gif_details.dart';
 import 'package:test_task_flutter/presentation/widgets/gif_details/gif_details_card.dart';
 
@@ -60,7 +61,7 @@ class GifDetailScreen extends StatelessWidget {
     return FloatingActionButton.extended(
       onPressed: () {
         Clipboard.setData(ClipboardData(text: gifUrl)); // Copy to clipboard
-        ScaffoldMessenger.of(context).showSnackBar(
+        ScaffoldMessenger.of(navigationService.navigatorKey.currentContext!).showSnackBar(
           SnackBar(content: Text("GIF URL copied to clipboard!"), duration: Duration(seconds: 2)),
         );
       },
