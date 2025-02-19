@@ -14,7 +14,7 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen> {
   final GifService _gifService = GifService();
-  List<dynamic> _gifs = [];
+  final List<dynamic> _gifs = [];
   bool _isLoading = false;
   bool _isFetchingMore = false;
   String _errorMessage = "";

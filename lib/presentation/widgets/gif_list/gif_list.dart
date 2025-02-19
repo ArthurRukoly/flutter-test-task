@@ -16,10 +16,10 @@ class GifList extends StatelessWidget {
 @override
 Widget build(BuildContext context) {
   return Scrollbar(
-    controller: scrollController, // Attach the existing ScrollController
-    thickness: 6.0, // Customize scrollbar thickness
-    radius: Radius.circular(10), // Rounded edges for the scrollbar
-    thumbVisibility: true, // Ensure scrollbar is always visible when scrolling
+    controller: scrollController,
+    thickness: 6.0, 
+    radius: Radius.circular(10),
+    thumbVisibility: true, 
     child: LayoutBuilder(
       builder: (context, constraints) {
         return GridView.builder(

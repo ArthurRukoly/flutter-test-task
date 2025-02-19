@@ -26,11 +26,11 @@ final ThemeData lightTheme = ThemeData(
   ),
   cardColor: discordCardLight,
 
-  // 🎯 Focus & Hover Effects
+  //  Focus & Hover Effects
   focusColor: discordDarkBlue,
   hoverColor: discordHoverLight,
 
-  // 🎯 Text Field Focus
+  //  Text Field Focus
   inputDecorationTheme: InputDecorationTheme(
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -57,11 +57,11 @@ final ThemeData darkTheme = ThemeData(
   ),
   cardColor: discordCardDark,
 
-  // 🎯 Focus & Hover Effects
+  //  Focus & Hover Effects
   focusColor: discordDarkBlue,
   hoverColor: discordHoverDark,
 
-  // 🎯 Text Field Focus
+  //  Text Field Focus
   inputDecorationTheme: InputDecorationTheme(
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(30)),

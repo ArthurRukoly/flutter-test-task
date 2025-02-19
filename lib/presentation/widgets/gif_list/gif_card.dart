@@ -3,7 +3,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:test_task_flutter/data/services/navigator_service.dart';
 
 class GifCard extends StatelessWidget {
-  // final String gifUrl;
   final dynamic gifData;
   const GifCard({super.key, required this.gifData});
 
@@ -11,22 +10,22 @@ class GifCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final gifUrl = gifData['images']['fixed_height']['url'];
 
-    void _moveToDetails() {
+    void moveToDetails() {
       navigationService.navigateToGifDetails(gifData);
     }
 
     return GestureDetector(
-      onTap: _moveToDetails,
+      onTap: moveToDetails,
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius:
-              BorderRadius.circular(15), // Ensures Card itself is rounded
+              BorderRadius.circular(15),
         ),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(15), // Clips child content
+          borderRadius: BorderRadius.circular(15), 
           child: CachedNetworkImage(
             imageUrl: gifUrl,
-            fit: BoxFit.cover, // Ensures image fills the container properly
+            fit: BoxFit.cover, 
             placeholder: (context, url) =>
                 Center(child: CircularProgressIndicator()),
             errorWidget: (context, url, error) =>
