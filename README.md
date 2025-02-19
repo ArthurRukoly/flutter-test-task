@@ -1,6 +1,10 @@
 # Flutter developer
 
+**Flutter version** - Flutter 3.27.3
+
 ## Requirements that are completed
+
+
 ### Technical
 - Primary platforms - iOS & Android 
 - Auto search - requests to retrieve Gif information from the service are made automatically with a small delay after user stops typing;
