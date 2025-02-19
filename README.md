@@ -25,4 +25,4 @@
 I couldn't research and learn about unit testing in provided time.
 
 - Using state management approaches or libraries such as BLoC (flutter_bloc), Riverpod or others; <br>
-Originally was Planned to implement it after completing default state management, but refactoring took too much time, and some features went missing (like pagination)
+Originally was Planned to implement it after completing default state management, but refactoring took too much time, and some features went missing (like pagination). This would require more research from my side.
